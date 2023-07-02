@@ -1,0 +1,98 @@
+@media only screen and (max-width: 410px) {
+  .alert__selamat__datang .alert {
+    padding: 10px;
+  }
+
+  .buat__password .simpan__password {
+    padding: 10px;
+  }
+
+  /* header start */
+
+  header {
+    text-align: left;
+    position: static;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header h1 {
+    font-size: 20px;
+  }
+
+  header .toggle__lock {
+    position: static;
+    text-align: center;
+    padding: 5px;
+  }
+
+  header .lock {
+    color: #06c83a;
+    border: 1px solid green;
+    box-shadow: 0px 0px 10px rgba(123, 241, 6, 0.293);
+  }
+
+  header .unlock {
+    color: red;
+    border: 1px solid red;
+    box-shadow: 0px 0px 10px rgba(241, 6, 6, 0.293);
+  }
+
+  /* header end */
+
+  /* main start */
+
+  main {
+    display: block;
+  }
+
+  #masukan__data {
+    position: fixed;
+    z-index: 999;
+    background-color: black;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 50px 10px 0px;
+
+    transition: 0.3s;
+  }
+
+  .hide {
+    transform: translateX(100%);
+  }
+
+  main #tampilkan__data {
+    width: 100%;
+  }
+
+  #tampilkan__data .card__note h1 {
+    font-size: 20px;
+  }
+  /* main end */
+
+  .nulis {
+    display: block;
+    border: 2px solid green;
+    width: min-content;
+    font-size: 20px;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: fixed;
+    right: 40px;
+    bottom: 70px;
+    z-index: 9999;
+  }
+
+  .nulis:active {
+    background-color: green;
+    color: black;
+  }
+}

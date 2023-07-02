@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Mono&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000000;
+  color: #06c83a;
+  font-family: "PT Mono", monospace;
+}
+
+.alert__selamat__datang {
+  position: fixed;
+  background-color: black;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 999;
+}
+
+.alert__selamat__datang .alert {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.alert__selamat__datang .buat__password {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  border-bottom: 1px solid green;
+  padding-bottom: 5px;
+}
+
+.buat__password .password {
+  flex: 4;
+  background-color: transparent;
+  border: none;
+  color: green;
+  outline: none;
+  padding: 5px;
+}
+
+.buat__password .simpan__password {
+  flex: 1;
+  background-color: green;
+  color: #06c83a;
+  border: none;
+  cursor: pointer;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+header .toggle__lock {
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 80px;
+  padding: 5px;
+}
+
+header .lock {
+  color: #06c83a;
+  border: 1px solid green;
+  box-shadow: 0px 0px 10px rgba(123, 241, 6, 0.293);
+}
+
+header .unlock {
+  color: red;
+  border: 1px solid red;
+  box-shadow: 0px 0px 10px rgba(241, 6, 6, 0.293);
+}
+
+main {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* =========== masukan data =========== */
+#masukan__data {
+  flex: 1.5;
+}
+
+#masukan__data form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#masukan__data input {
+  background-color: transparent;
+  color: #06c83a;
+  border: 1px solid #06c83a;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  outline: none;
+}
+
+#masukan__data textarea {
+  background-color: transparent;
+  color: #06c83a;
+  border: 1px solid #06c83a;
+  padding: 10px;
+  font-size: 14px;
+  outline: none;
+}
+
+#masukan__data button {
+  background-color: green;
+  color: #06c83a;
+  border: none;
+  padding: 10px 0;
+  letter-spacing: 3px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#masukan__data button:hover {
+  opacity: 0.89;
+}
+
+#masukan__data button:active {
+  transform: scale(0.97);
+}
+
+/* =========== tampilkan data =========== */
+
+#tampilkan__data {
+  flex: 2;
+  width: 100px;
+  overflow: hidden;
+}
+
+#tampilkan__data h2 {
+  background-color: green;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+#tampilkan__data .isi__catatan {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 5px;
+}
+
+#tampilkan__data .card__note {
+  border: 1px solid green;
+  padding: 10px 20px 10px 10px;
+  position: relative;
+}
+
+#tampilkan__data .card__note .hapus {
+  background-color: red;
+  width: min-content;
+  padding: 1px 5px;
+  color: rgb(225, 174, 174);
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+#tampilkan__data .card__note h1 {
+  border-bottom: 1px solid rgba(1, 255, 1, 0.196);
+  margin-bottom: 5px;
+}
+
+.nulis {
+  display: none;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  background-color: green;
+  width: 100%;
+  text-align: center;
+}
+
+#password {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.662);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+#password .card__password {
+  position: relative;
+  display: flex;
+  gap: 5px;
+  padding: 30px;
+  border: 1px solid green;
+  background-color: #000000;
+  box-shadow: 0px 0px 10px rgba(123, 241, 6, 0.293);
+}
+
+.card__password input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid green;
+  color: green;
+  outline: none;
+  padding: 5px;
+}
+
+.card__password button {
+  background-color: green;
+  color: #06c83a;
+  border: none;
+  cursor: pointer;
+  padding: 0 5px;
+}
+
+.card__password button:active {
+  transform: scale(0.97);
+}
+
+.card__password .alert__salah {
+  border: 1px solid rgb(142, 8, 8);
+  background-color: rgb(255, 0, 0);
+  color: rgb(242, 199, 199);
+  position: absolute;
+  width: max-content;
+  left: 0;
+  bottom: -50px;
+  padding: 5px;
+  display: none;
+}

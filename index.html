@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>private note app</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/mobile.css" />
+
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="alert__selamat__datang">
+      <div class="alert">
+        <h1 class="judul__alert">Tampaknya kamu baru di sini.. 😊</h1>
+        <p>Buat password kamu :</p>
+        <div class="buat__password">
+          <input type="password" placeholder="password" class="password" required />
+          <button class="simpan__password">Next</button>
+        </div>
+      </div>
+    </div>
+    <header>
+      <h1>secret notes app</h1>
+
+      <div class="toggle__lock lock">
+        <i class="bx bxs-lock-alt gembok"></i>
+      </div>
+    </header>
+    <main>
+      <div id="masukan__data" class="hide">
+        <form id="formulir">
+          <input type="text" placeholder="judul" required />
+          <textarea cols="30" rows="10" placeholder="tulis sesuatu" spellcheck="false" required></textarea>
+          <button type="submit">simpan</button>
+        </form>
+      </div>
+
+      <div id="tampilkan__data">
+        <h2>Daftar catatan</h2>
+        <div class="isi__catatan">
+          <!-- konten akan dimasukan di sini -->
+        </div>
+      </div>
+    </main>
+
+    <div id="password">
+      <div class="card__password">
+        <div class="alert__salah">password yang kamu masukan salah..!!</div>
+        <input type="password" placeholder="masukan password" class="pass__encrypt" required />
+        <button class="cek__password">Decrypt</button>
+      </div>
+    </div>
+
+    <div class="nulis">
+      <i class="bx bxs-pencil icon__nulis"></i>
+    </div>
+
+    <footer>
+      <p>dibuat oleh sagan &copy; 2023</p>
+    </footer>
+
+    <!-- javascript -->
+    <script src="/js/crypto-js.js"></script>
+    <script src="/js/enkripsi.js"></script>
+
+    <script src="/js/script.js"></script>
+  </body>
+</html>
