@@ -2,6 +2,10 @@ const form = document.getElementById("formulir");
 const password = document.querySelector(".password");
 const btnSimpanPass = document.querySelector(".simpan__password");
 const nulis = document.querySelector(".nulis");
+const ressetPass = document.querySelector(".resset__password");
+const cardPass = document.querySelector(".card__password");
+const cardResPass = document.querySelector(".card__resset__password");
+const btnResetPass = document.querySelector(".btn__resset__password");
 
 // Memeriksa apakah data dengan key "notes" ada di localStorage
 if (localStorage.getItem("notes") && localStorage.getItem("pass")) {
@@ -152,4 +156,22 @@ nulis.addEventListener("click", () => {
   iconNulis.classList.toggle("bx-x");
 
   formNotes.classList.toggle("hide");
+});
+
+ressetPass.addEventListener("click", () => {
+  cardPass.style.display = "none";
+  ressetPass.style.display = "none";
+  cardResPass.style.display = "flex";
+});
+
+btnResetPass.addEventListener("click", () => {
+  const pass = document.querySelector(".new__password").value;
+  const enkripPass = enkripsText(pass);
+  localStorage.setItem("pass", enkripPass);
+  console.log("password berhasil diperbarui");
+  document.querySelector(".new__password").value = "";
+
+  cardPass.style.display = "flex";
+  ressetPass.style.display = "block";
+  cardResPass.style.display = "none";
 });
