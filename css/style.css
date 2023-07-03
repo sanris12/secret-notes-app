@@ -191,6 +191,8 @@ footer {
   text-align: center;
 }
 
+/* jendela password start */
+
 #password {
   position: fixed;
   background-color: rgba(0, 0, 0, 0.662);
@@ -201,9 +203,24 @@ footer {
   /* display: flex; */
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 300;
   display: none;
 }
 
+.close__jendela__password {
+  width: 30px;
+  height: 30px;
+  border: 1px solid red;
+  color: white;
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
 #password .card__password {
   position: relative;
   display: flex;
@@ -246,3 +263,45 @@ footer {
   padding: 5px;
   display: none;
 }
+
+.card__resset__password {
+  position: relative;
+  /* display: flex; */
+  gap: 5px;
+  padding: 30px;
+  border: 1px solid green;
+  background-color: #000000;
+  box-shadow: 0px 0px 10px rgba(123, 241, 6, 0.293);
+  display: none;
+}
+
+.card__resset__password input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid green;
+  color: green;
+  outline: none;
+  padding: 5px;
+}
+
+.card__resset__password button {
+  background-color: green;
+  color: #06c83a;
+  border: none;
+  cursor: pointer;
+  padding: 0 5px;
+}
+
+.card__resset__password button:active {
+  transform: scale(0.97);
+}
+
+.resset__password {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.resset__password:hover {
+  opacity: 0.9;
+}
+
+/* jendela password end */
