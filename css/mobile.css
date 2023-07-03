@@ -49,7 +49,7 @@
 
   #masukan__data {
     position: fixed;
-    z-index: 999;
+    z-index: 100;
     background-color: black;
 
     top: 0;
@@ -88,7 +88,7 @@
     position: fixed;
     right: 40px;
     bottom: 70px;
-    z-index: 9999;
+    z-index: 200;
   }
 
   .nulis:active {
