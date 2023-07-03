@@ -131,6 +131,7 @@ btnValidate.addEventListener("click", () => {
     localStorage.setItem("isLock", "false");
     unLock();
     inputPass.style.display = "none";
+    passx.value = "";
   } else {
     const alertSalah = document.querySelector(".alert__salah");
     alertSalah.style.display = "block";
@@ -139,4 +140,8 @@ btnValidate.addEventListener("click", () => {
       alertSalah.style.display = "none";
     }, 2000);
   }
+});
+
+document.querySelector(".close__jendela__password").addEventListener("click", () => {
+  inputPass.style.display = "none";
 });
